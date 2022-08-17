@@ -14,11 +14,18 @@ body {
 
 .container .navbar nav {
   display: flex;
+  position: relative;
 }
 .container .navbar nav ul {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 54%;
+  height: 100vh;
+  background-color: rgba(55, 55, 55, 0.9);
   position: absolute;
+  top: -45px;
   right: 0;
   padding-top: 3.5rem;
   list-style: none;
@@ -26,6 +33,24 @@ body {
 .container .navbar nav ul a {
   text-decoration: none;
   color: #fff;
+}
+.container .navbar nav .header-image {
+  background-color: rgba(65, 65, 65, 0.9);
+  width: 46%;
+  height: 100vh;
+  position: absolute;
+  top: -45px;
+  z-index: 3;
+}
+.container .navbar nav .header-image img {
+  outline: 3px #eece1a solid;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .container .hamberger-menue {
@@ -43,7 +68,6 @@ body {
 }
 
 .home {
-  position: fixed;
   margin: 11rem 2.5rem;
 }
 .home .social-medias a {

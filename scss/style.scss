@@ -14,19 +14,41 @@ body {
     color: $color-white;
 }
 
+
+
 .container .navbar nav {
     display: flex;
-
+    position: relative;
     ul {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 54%;  height: 100vh;
+        background-color: rgba(darken($primary-color,5), 0.9);
         position: absolute;
-        right: 0;
+        top: -45px; right: 0;
         padding-top: 3.5rem;
         list-style: none;
         a {
             text-decoration: none;
             color: $color-white;
+        }
+    }
+
+    .header-image{
+        background-color: rgba(darken($primary-color,1), 0.9);
+        width: 46%; height: 100vh;
+        position: absolute;
+        top: -45px;
+        z-index: 3;
+        img{
+            outline: 3px #eece1a solid;
+            width: 12rem; height: 12rem;
+            border-radius: 50%;
+            position: relative;
+            top: 50%; left: 50%;
+            transform: translate(-50%,-50%);
         }
     }
 }
@@ -36,7 +58,6 @@ body {
 
 .container .hamberger-menue {
     width: 30px; height: 45px;
-    // background-color: #eece1a;
     position: relative;
     top: 27px; left: 95%;
 
@@ -52,7 +73,6 @@ body {
 
 // main part
 .home {
-    position: fixed;
     margin:11rem 2.5rem;
 
     & .social-medias a{
