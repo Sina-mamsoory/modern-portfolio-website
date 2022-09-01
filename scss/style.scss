@@ -1,3 +1,4 @@
+@import "mixins";
 @import 'variables';
 @import 'menu';
 
@@ -10,37 +11,110 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100vh;
     line-height: 2;
-    background-color: rgba($primary-color, 1);
     color: $color-white;
+    background-color: $primary-color;
+    overflow: hidden;
 }
 
 
 // main part
-.home {
-    margin:11rem 2.5rem;
 
-    & .social-medias a{
+.container {
+    overflow: hidden;
+    height: 100vh;
+    @include background-image;
+}
+
+main {
+    margin:2.5rem 3.5rem;
+    .social-medias a{
+        @include ease-out(0.3s);
         color: $color-white;
         margin-right: 0.7rem;
+
+        &:nth-child(1):hover {
+            color:  #4183C4;
+        }
+
+        &:nth-child(2):hover {
+            color: #C13584;
+        }
+
+        &:nth-child(3):hover {
+            color: #0A66C2;
+        }
+        
+        &:nth-child(4):hover {
+            color: #229ED9;
+        }
+    }
+    &.home{
+        h1 {
+            margin-top: 11rem;
+        }
     }
 }
 
 h1,
-h2 {
+h2,
+h3 {
     margin: 0;
     font-weight: 400;
-    &.name {
+    &.heading-name {
         font-size: 5rem;
-        .last-name {
-            color: #eece1a;
+        .text-secondary {
+            color: $secondary-color;
         }
     }
 
     &.about {
         font-size: 1.3rem;
+        background-color: rgba(lighten( $primary-color, 2), 0.5);
         border-radius: 12px;
         margin-bottom: 2rem;
         padding: 0.2rem 1rem;
-        background-color: rgba(lighten( $primary-color, 2), 0.5);
+    }
+}
+
+.about-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas:
+        'bioimage bio bio'
+        'job1 job2 job3';
+    grid-template-columns: repeat(3, 1fr);
+    .bio-image {
+        grid-area: bioimage;
+        width:14rem; height: 14rem;
+        border-radius: 50%;
+        outline: 3px $secondary-color solid;
+        margin: auto;
+    }
+
+    .bio {
+        grid-area: bio;
+        font-size: 1.3rem;
+    }
+
+    .job1 {
+        grid-area: job1;
+
+    }
+    .job2 {
+        grid-area: job2;
+
+    }
+    .job3 {
+        grid-area: job3;
+
+    }
+
+    .job {
+         padding: 0.5rem;
+         background-color: lighten( $primary-color, 5);
+         border-bottom: $secondary-color 5px solid;
+         h3 , h5 {
+            margin-bottom: 20px;
+         }
     }
 }
