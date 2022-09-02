@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "modern portfolio website(sass)",
   "main": "index.js",
+  "homepage": "https://Sina-mamsoory.github.io/modern-portfolio-website",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
