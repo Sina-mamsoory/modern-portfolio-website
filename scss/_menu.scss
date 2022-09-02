@@ -51,7 +51,7 @@
         justify-content: center;
         align-items: center;
         position: absolute;
-        top: -45px; right: 0;
+        top: 0px; right: 0;
         padding-top: 3.5rem;
         &.show {
             @include ease-out(0.5s);
@@ -61,7 +61,7 @@
             
             text-decoration: none;
             color: $color-white;
-            font-size: 25px;
+            font-size: 30px;
             font-weight: 450;
             &.cerunt {
                 color: $secondary-color;
@@ -93,7 +93,7 @@
         transform: translateY(100%);
         @include ease-out(0.5s);
         position: absolute;
-        top: -45px;
+        top: 0px;
         z-index: 3;
         &.show {
             @include ease-out(0.5s);

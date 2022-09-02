@@ -46,7 +46,7 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: -45px;
+  top: 0px;
   right: 0;
   padding-top: 3.5rem;
 }
@@ -57,7 +57,7 @@
 .navbar .menu-nav .menu-ul a {
   text-decoration: none;
   color: #fff;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 450;
 }
 .navbar .menu-nav .menu-ul a.cerunt {
@@ -93,7 +93,7 @@
   transform: translateY(100%);
   transition: all 0.5s ease-out;
   position: absolute;
-  top: -45px;
+  top: 0px;
   z-index: 3;
 }
 .navbar .menu-nav .header-portrait.show {
@@ -296,6 +296,9 @@ h3.about {
 }
 
 @media screen and (max-width: 768px) {
+  body {
+    overflow-y: visible;
+  }
   main {
     align-items: center;
     text-align: center;
@@ -314,19 +317,30 @@ h3.about {
     transform: translate3d(0, 0, 0);
   }
   .navbar .menu-nav .menu-ul {
+    overflow: hidden;
     font-size: 34px;
-    top: 147px;
+    top: 230px;
     height: 75vh;
-    transform: translate3d(100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  .navbar .menu-nav .menu-ul a {
+    font-size: 28px;
   }
   .navbar .menu-nav .header-portrait {
-    top: 0;
+    top: 0px;
     height: 25vh;
-    transform: translate3d(-100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
   }
   .navbar .menu-nav .header-portrait img {
     width: 8.5rem;
     height: 8.5rem;
+  }
+  .about-info {
+    grid-template-areas: "bioimage" "bio" "bio" "job1" "job2" "job3";
+    grid-template-columns: 1fr;
+  }
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (max-width: 500px) {
@@ -334,10 +348,24 @@ h3.about {
     font-size: 3.5rem;
   }
   main {
-    margin: 0.8rem 2rem;
+    margin: 2.5rem 2rem;
   }
   main.home h1 {
     margin-top: 9rem;
+  }
+  .navbar .menu-nav .menu-ul {
+    font-size: 28px;
+    top: 163px;
+  }
+  .navbar .menu-nav .menu-ul a {
+    font-size: 20px;
+  }
+  .navbar .menu-nav .header-portrait img {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+  .projects {
+    grid-template-columns: 1fr;
   }
 }
 
