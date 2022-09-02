@@ -23,3 +23,16 @@
     }
 }
 
+@mixin  mq($Bpoint...) {
+    @if length($Bpoint) == 1 {
+        @media screen and (max-width: nth($Bpoint, 1)){
+            @content;
+        }
+    }
+
+    @if length($Bpoint) == 2 {
+        @media screen and (min-width: nth($Bpoint, 1)) and (max-width: nth($Bpoint, 2)) {
+            @content;
+        }
+    }
+}

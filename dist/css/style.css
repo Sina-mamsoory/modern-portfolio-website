@@ -10,9 +10,9 @@
   z-index: 9;
   width: 30px;
   height: 45px;
-  position: relative;
+  position: absolute;
   top: 27px;
-  left: 95%;
+  right: 37px;
   cursor: pointer;
 }
 .hamberger-menue .line {
@@ -173,7 +173,7 @@ main .social-medias a:nth-child(4):hover {
   color: #229ED9;
 }
 main.home h1 {
-  margin-top: 11rem;
+  margin-top: 13rem;
 }
 
 .text-secondary {
@@ -293,6 +293,52 @@ h3.about {
 }
 .boxes div:hover span {
   color: #333;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center;
+  }
+  main .heading-name {
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  .navbar .menu-nav .header-portrait,
+.navbar .menu-nav .menu-ul {
+    width: 100%;
+    min-height: 0;
+  }
+  .navbar .menu-nav .header-portrait.show,
+.navbar .menu-nav .menu-ul.show {
+    transform: translate3d(0, 0, 0);
+  }
+  .navbar .menu-nav .menu-ul {
+    font-size: 34px;
+    top: 147px;
+    height: 75vh;
+    transform: translate3d(100%, 0, 0);
+  }
+  .navbar .menu-nav .header-portrait {
+    top: 0;
+    height: 25vh;
+    transform: translate3d(-100%, 0, 0);
+  }
+  .navbar .menu-nav .header-portrait img {
+    width: 8.5rem;
+    height: 8.5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  h1.heading-name {
+    font-size: 3.5rem;
+  }
+  main {
+    margin: 0.8rem 2rem;
+  }
+  main.home h1 {
+    margin-top: 9rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

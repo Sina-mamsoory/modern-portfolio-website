@@ -9,7 +9,10 @@
 .hamberger-menue {
     z-index: 9;
     width: 30px; height: 45px;
-    @include position(relative,27px,95%);
+    // @include position(relative,27px,95%);
+    position: absolute;
+    top: 27px;
+    right: 37px;
     cursor: pointer;
     .line {
         @extend %hambergur-basic-style;

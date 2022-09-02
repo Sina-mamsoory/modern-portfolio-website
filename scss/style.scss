@@ -57,7 +57,7 @@ main {
     }
     &.home{
         h1 {
-            margin-top: 11rem;
+            margin-top: 13rem;
         }
     }
 }
@@ -197,3 +197,5 @@ h3 {
         }
     }
 }
+
+@import 'mobile';
