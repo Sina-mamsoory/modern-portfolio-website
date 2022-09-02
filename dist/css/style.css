@@ -176,6 +176,10 @@ main.home h1 {
   margin-top: 11rem;
 }
 
+.text-secondary {
+  color: #eece1a;
+}
+
 h1,
 h2,
 h3 {
@@ -186,11 +190,6 @@ h1.heading-name,
 h2.heading-name,
 h3.heading-name {
   font-size: 5rem;
-}
-h1.heading-name .text-secondary,
-h2.heading-name .text-secondary,
-h3.heading-name .text-secondary {
-  color: #eece1a;
 }
 h1.about,
 h2.about,
@@ -271,6 +270,29 @@ h3.about {
 .btn-dark {
   background-color: black;
   color: #fff;
+}
+
+.boxes {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 1rem;
+}
+.boxes div {
+  font-size: 2rem;
+  border: 3px #fff solid;
+  padding: 1rem 2.1rem;
+  margin-bottom: 3rem;
+  transition: all 0.5s ease-out;
+}
+.boxes div:hover {
+  padding: 0.2rem 1.2rem;
+  background-color: #eece1a;
+  color: #333;
+}
+.boxes div:hover span {
+  color: #333;
 }
 
 /*# sourceMappingURL=style.css.map */

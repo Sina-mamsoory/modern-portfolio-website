@@ -62,6 +62,10 @@ main {
     }
 }
 
+.text-secondary {
+    color: $secondary-color;
+}
+
 h1,
 h2,
 h3 {
@@ -69,9 +73,6 @@ h3 {
     font-weight: 400;
     &.heading-name {
         font-size: 5rem;
-        .text-secondary {
-            color: $secondary-color;
-        }
     }
 
     &.about {
@@ -83,6 +84,8 @@ h3 {
     }
 }
 
+
+//about me
 .about-info {
     display: grid;
     grid-gap: 30px;
@@ -126,6 +129,8 @@ h3 {
     }
 }
 
+
+//work/projects
 .projects{
     display: grid;
     grid-gap: 0.7rem;
@@ -163,4 +168,32 @@ h3 {
     @extend .btn;
     background-color: darken( $primary-color, 50);
     color: #fff;
+}
+
+
+//contact me
+.boxes {
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 1rem;
+
+    div {
+        font-size: 2rem;
+        border: 3px #fff solid;
+        padding: 1rem 2.1rem;
+        margin-bottom: 3rem;
+        @include ease-out(0.5s);
+
+        &:hover {
+            padding: 0.2rem 1.2rem;
+            background-color: $secondary-color;
+            color: #333;
+            span {
+                color: #333;
+            }
+        }
+    }
 }
